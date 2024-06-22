@@ -1,4 +1,3 @@
-Captable
 Captable is a lightweight solution designed to streamline the process of organizing orders in restaurants or cafes. By minimizing backend requests, it ensures a more responsive and efficient user experience. All calculations are performed on the frontend, with temporary data storage in the browser, allowing for quick and seamless order management. When ready, the compiled data is sent as a table via email.
 
 Features
