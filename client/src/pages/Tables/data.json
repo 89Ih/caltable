@@ -1,0 +1,547 @@
+{
+  "cocktails": [
+    {
+      "id": "CKT01",
+      "name": "ESPRESSO MARTINI",
+      "price": "9.00"
+    },
+    {
+      "id": "CKT02",
+      "name": "Pina Colada ",
+      "price": "7.90"
+    },
+    {
+      "id": "CKT03",
+      "name": "Caipirinha",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT04",
+      "name": "Mojito",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT05",
+      "name": "Gin Basil Smash",
+      "price": "7.80"
+    },
+    {
+      "id": "CKT06",
+      "name": "Whiskey Sour",
+      "price": "11.00"
+    },
+    {
+      "id": "CKT07",
+      "name": "Old Fashioned",
+      "price": "11.00"
+    },
+    {
+      "id": "CKT08",
+      "name": "Negroni",
+      "price": "7.90"
+    },
+    {
+      "id": "CKT09",
+      "name": "Moscow Mule",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT10",
+      "name": "Margarita",
+      "price": "5.40"
+    },
+    {
+      "id": "CKT11",
+      "name": "CAMPARI ORANGE",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT12",
+      "name": "CAMPARI SODA",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT13",
+      "name": "Aperol Spritz",
+      "price": "7.40"
+    },
+    {
+      "id": "CKT14",
+      "name": "APEROL MULE",
+      "price": "8.90"
+    },
+    {
+      "id": "CKT15",
+      "name": "shot(vokda-2CL)",
+      "price": "3.00"
+    }
+  ],
+  "shots": [
+    {
+      "id": "sh15",
+      "name": "shot(vokda-4CL)",
+      "price": "4.50"
+    },
+    {
+      "id": "sh16",
+      "name": "shot(tequila-2CL)",
+      "price": "3.00"
+    },
+    {
+      "id": "sh17",
+      "name": "shot(tequila-4CL)",
+      "price": "4.50"
+    },
+    {
+      "id": "sh18",
+      "name": "shot(jameson-2CL)",
+      "price": "4.00"
+    },
+    {
+      "id": "sh19",
+      "name": "shot(jameson-4CL)",
+      "price": "5.50"
+    },
+    {
+      "id": "sh20",
+      "name": "shot(luft-2CL)",
+      "price": "2.00"
+    },
+    {
+      "id": "sh21",
+      "name": "shot(luft-4CL)",
+      "price": "3.00"
+    },
+    {
+      "id": "sh22",
+      "name": "shot(jägermeister-2CL)",
+      "price": "3.00"
+    },
+    {
+      "id": "sh23",
+      "name": "shot(jägermeister-4CL)",
+      "price": "4.50"
+    }
+  ],
+  "wine": [
+    {
+      "id": "we01",
+      "name": "white(claus jacob)",
+      "price": "4.80"
+    },
+    {
+      "id": "we02",
+      "name": "white(mezzacorona)",
+      "price": "7.40"
+    },
+    {
+      "id": "we03",
+      "name": "white(primitivo rosato)",
+      "price": "4.80"
+    },
+    {
+      "id": "we04",
+      "name": "white(sekt trocken mumm&co)",
+      "price": "4.80"
+    },
+    {
+      "id": "we05",
+      "name": "white(bottel claus jacob 0,75 l)",
+      "price": "19.00"
+    },
+    {
+      "id": "we06",
+      "name": "red(primitivo)",
+      "price": "4.80"
+    },
+    {
+      "id": "we07",
+      "name": "red(maques)",
+      "price": "7.20"
+    },
+    {
+      "id": "we08",
+      "name": "red(regaleali)",
+      "price": "7.00"
+    },
+    {
+      "id": "we09",
+      "name": "red(bottel primitivo)",
+      "price": "19.00"
+    }
+  ],
+  "sandwiches": [
+    {
+      "id": "sdw1",
+      "name": "Pastrami",
+      "price": "8.90"
+    },
+    {
+      "id": "sdw2",
+      "name": "Pastrami(pochiertes Ei..)",
+      "price": "11.40"
+    },
+    {
+      "id": "sdw3",
+      "name": "Veggie",
+      "price": "9.40"
+    },
+    {
+      "id": "sdw4",
+      "name": "Halloumi",
+      "price": "9.40"
+    },
+    {
+      "id": "sdw5",
+      "name": "Vegan",
+      "price": "8.40"
+    },
+    {
+      "id": "sdw6",
+      "name": "Belegtes Croissant",
+      "price": "9.40"
+    },
+    {
+      "id": "sdw7",
+      "name": "PIZZEN(pastrami und käse)",
+      "price": "6.50"
+    },
+    {
+      "id": "sdw8",
+      "name": "PIZZEN(spinat und käse)",
+      "price": "6.50"
+    }
+  ],
+  "bowls": [
+    {
+      "id": "bwl1",
+      "name": "halloumi (veggie)",
+      "price": "11.80"
+    },
+    {
+      "id": "bwl2",
+      "name": "tofu (vegan)",
+      "price": "11.80"
+    },
+    {
+      "id": "bwl3",
+      "name": "lachs",
+      "price": "12.80"
+    },
+    {
+      "id": "bwl4",
+      "name": "hähnchen",
+      "price": "12.00"
+    },
+    {
+      "id": "bwl5",
+      "name": "fattusch",
+      "price": "9.90"
+    },
+    {
+      "id": "bwl6",
+      "name": "orientalisch",
+      "price": "11.80"
+    }
+  ],
+  "brunch": [
+    {
+      "id": "bkf1",
+      "name": "Käse-Frühstück",
+      "price": "12.60"
+    },
+    {
+      "id": "bkf2",
+      "name": "Arabisches Frühstück",
+      "price": "14.00"
+    },
+    {
+      "id": "bkf3",
+      "name": "Narani—Frühstück",
+      "price": "22.00"
+    },
+    {
+      "id": "bkf4",
+      "name": "Protein-Frühstück",
+      "price": "12.00"
+    },
+    {
+      "id": "bkf5",
+      "name": "Süßes-Frühstück",
+      "price": "9.00"
+    },
+    {
+      "id": "bkf6",
+      "name": "Veganes Frühstück",
+      "price": "12.5"
+    },
+    {
+      "id": "bkf7",
+      "name": "obstsalat oder müsli",
+      "price": "8.00"
+    },
+    {
+      "id": "bkf8",
+      "name": "klassisches rührei",
+      "price": "8.40"
+    },
+    {
+      "id": "bkf9",
+      "name": "spiegeleier",
+      "price": "8.40"
+    },
+    {
+      "id": "bkf9",
+      "name": "shakshuka",
+      "price": "10.90"
+    },
+    {
+      "id": "bkf10",
+      "name": "omelette",
+      "price": "10.90"
+    },
+    {
+      "id": "bkf11",
+      "name": "pochiertes ei",
+      "price": "9.90"
+    },
+    {
+      "id": "bkf12",
+      "name": "Extra(brötchen..)",
+      "price": "1.50"
+    },
+    {
+      "id": "bkf13",
+      "name": "Extra(avocado..)",
+      "price": "2.00"
+    },
+    {
+      "id": "bkf14",
+      "name": "NARANJ SALAT",
+      "price": "7.60"
+    },
+    {
+      "id": "bkf15",
+      "name": "NACHOS",
+      "price": "6.50"
+    },
+    {
+      "id": "bkf16",
+      "name": "HUMMUS TELLER",
+      "price": "6.00"
+    },
+    {
+      "id": "bkf17",
+      "name": "GEMISCHTER TELLER",
+      "price": "7.50"
+    }
+  ],
+  "sweets": [
+    {
+      "id": "tkf1",
+      "name": "croissants(Plain)",
+      "price": "2.20"
+    },
+    {
+      "id": "t2",
+      "name": "Nuss Nougat",
+      "price": "2.80"
+    },
+    {
+      "id": "t3",
+      "name": "croissants(Ricotta-Creme) ",
+      "price": "3.80"
+    },
+    {
+      "id": "t4",
+      "name": "croissants(Pistazien-Creme)",
+      "price": "4.20"
+    },
+    {
+      "id": "t5",
+      "name": "baklava ",
+      "price": "2.50"
+    },
+    {
+      "id": "t6",
+      "name": "cannoli siciliani",
+      "price": "2.50"
+    },
+    {
+      "id": "t7",
+      "name": "kuchen(Schoko)",
+      "price": "3.80"
+    },
+    {
+      "id": "t8",
+      "name": "kuchen(Orange-Carrot)",
+      "price": "4.20"
+    },
+    {
+      "id": "t9",
+      "name": "san sebastian(pistazien)",
+      "price": "4.20"
+    },
+    {
+      "id": "t10",
+      "name": "kuchen(san sebastian)",
+      "price": "4.90"
+    },
+    {
+      "id": "t11",
+      "name": "käsekuchen",
+      "price": "4.90"
+    },
+    {
+      "id": "t12",
+      "name": "naranj orangentorte",
+      "price": "5.40"
+    }
+  ],
+  "hotdrinks": [
+    {
+      "id": "h14",
+      "name": "Kaffee Americano",
+      "price": "2.70"
+    },
+    {
+      "id": "h15",
+      "name": "Kaffee Crema ",
+      "price": "2.80"
+    },
+    {
+      "id": "h1",
+      "name": "Espresso",
+      "price": "2.20"
+    },
+    {
+      "id": "h2",
+      "name": "Double Espresso",
+      "price": "2.80"
+    },
+    {
+      "id": "h3",
+      "name": "Flat White ",
+      "price": "3.60"
+    },
+    {
+      "id": "h4",
+      "name": "Cappuccino",
+      "price": "3.20"
+    },
+    {
+      "id": "h5",
+      "name": "Latte Macchiato",
+      "price": "3.40"
+    },
+    {
+      "id": "h6",
+      "name": "Bio Decaf",
+      "price": "4.1"
+    },
+    {
+      "id": "h7",
+      "name": "Extra Shot",
+      "price": "0.60"
+    },
+    {
+      "id": "h8",
+      "name": "Hot Chocolate",
+      "price": "3.40"
+    },
+    {
+      "id": "h9",
+      "name": "Chai-Latte ",
+      "price": "3.60"
+    },
+    {
+      "id": "h10",
+      "name": "Matcha Latte",
+      "price": "4.20"
+    },
+    {
+      "id": "h11",
+      "name": "Tee",
+      "price": "2.80"
+    },
+    {
+      "id": "h12",
+      "name": "Frischer Ingwertee",
+      "price": "3.60"
+    },
+    {
+      "id": "h13",
+      "name": "Frische Minze",
+      "price": "3.60"
+    }
+  ],
+  "colddrinks": [
+    {
+      "id": "d1",
+      "name": "Eiskaffee",
+      "price": "3.80"
+    },
+    {
+      "id": "d2",
+      "name": "Proviant (Limonade)",
+      "price": "3.40"
+    },
+    {
+      "id": "d3",
+      "name": "Fritz Kola",
+      "price": "2.80"
+    },
+    {
+      "id": "d4",
+      "name": "Fritz Kola",
+      "price": "2.80"
+    },
+    {
+      "id": "d5",
+      "name": "Wasser (still, medium)",
+      "price": "2.40"
+    },
+    {
+      "id": "d6",
+      "name": "Frischer Orangentee",
+      "price": "3.60"
+    },
+    {
+      "id": "d7",
+      "name": "Frisch Orangensaft",
+      "price": "3.50"
+    }
+  ],
+  "longdrinks": [
+    {
+      "id": "ld1",
+      "name": "gin tonic",
+      "price": "7.40"
+    },
+    {
+      "id": "ld2",
+      "name": "rum cola",
+      "price": "7.60"
+    },
+    {
+      "id": "ld3",
+      "name": "raki / arak",
+      "price": "6.50"
+    },
+    {
+      "id": "ld4",
+      "name": "wodka saft",
+      "price": "7.40"
+    },
+    {
+      "id": "ld5",
+      "name": "wodka energy",
+      "price": "7.60"
+    },
+    {
+      "id": "ld6",
+      "name": "alrayan",
+      "price": "7.60"
+    }
+  ]
+}
