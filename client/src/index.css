@@ -3,239 +3,305 @@
 @tailwind utilities;
 
 :root {
-    --darkest: #010a13;
-    --darker: #0d273f;
-    --dark: #195080;
-    --whitely: #f5f5f5c8;
-    --bg_btn: linear-gradient(to right, var(--darker), var(--dark));
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    color: var(--whitely);
-    text-decoration: none;
-  }
-  
-  html,
-  body {
-    color: var(--dark);
-    background-color: var(--darkest);
-  }
-  
-  header {
-    height: 85px;
-    padding: 0 10px 0 10px;
-    border-bottom: 5px double var(--dark);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  section {
-    padding: 10px;
-  }
-  #tables {
-    margin-top: 5%;
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap !important;
-    align-items: center;
-   justify-content: center;
-    gap: 10px;
-  }
-  
-  #tables > a {
-    border-radius: 5px;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  ._tableAnchor{
-    background: linear-gradient(to right, var(--darker), var(--dark));
-  }
+  --darkest: #010a13;
+  --darker: #0d273f;
+  --dark: #195080;
+  --whitely: #f5f5f5c8;
+  --bg_btn: linear-gradient(to right, var(--darker), var(--dark));
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: thin solid var(--dark);
-  }
-  
-  th,
-  td {
-    border: thin solid var(--dark);
-    padding: 8px 10px;
-  }
-  
-  caption {
-    caption-side: bottom;
-    border-left: thin solid var(--dark);
-    border-bottom: thin solid var(--dark);
-    border-right: thin solid var(--dark);
-  }
-  
-  caption > div {
-    padding: 0 5px 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  caption > div > p  {
-      color: var(--whitely);  
-      font-size: 16px;
-  }
-  caption > div > button {
-    border: unset;
-    color: var(--whitely);
-    background: linear-gradient(
-      to left,
-      #11c8c8,
-      #008b8b,
-      #008b8b88,
-      #02707088,
-      #008b8b36
-    );
-    height: 25px;
-    margin: 7px 0 7px 0;
-    width: 125px;
-    border-radius: 10px;
-    border: thin solid var(--whitely);
-  }
-  
-  form > div:first-child {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 15px;
-  }
-  
-  select {
-    height: 35px;
-    text-transform: capitalize;
-    background-color: unset;
-    border: thin solid var(--dark);
-    color: var(--whitely);
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    outline: unset !important;
-    /* appearance: none; */
-  }
-  
-  option {
-    background-color: var(--darkest);
-  }
-  
-  #items {
-    width: 100%;
-    height: 125px;
-  }
-  
-  #items > div {
-    min-width: 100%;
-    height: 125px;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 7.5px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
-  
-  #items > div::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  #items > div > button {
-    width: 200px;
-    height: 30px;
-    border-radius: 5px;
-    background: var(--bg_btn);
-    border: unset;
-    color: var(--whitely);
-  }
-  
-  main[class= main] {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  main[class= main] > section:first-child {
-    width: calc(100% - 250px);
-  }
-  
-  main[class= main] > section:last-child {
-    width: 250px;
-  }
-  
-  aside {
-    position: fixed;
-    top: 85px;
-    right: 0;
-    bottom: 0;
-    width: 250px;
-    background-color: var(--darkest);
-    border-left: 5px double var(--dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  aside > div {
-    height: calc(100% - 39px);
-    overflow-y: scroll;
-  }
-  aside > div::-webkit-scrollbar{
-    width: 12px !important;
-    background-color: #ffffff09 !important;
-    border-left: thin solid rgba(128, 128, 128, 0.068) !important;
-  }
-  aside > div::-webkit-scrollbar-thumb {
-    background-color: rgba(71, 85, 105, 0.11) !important;
-  }
-  ._sendBTN{
-    color: var(--whitely);
-    font-weight: 700;
-    background-color:rgb(13, 143, 13); 
-    width: 95%;
-    align-self: center;
-    height: 39px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-  }
-  ._sendBTN:hover{
-    background-color:rgba(0, 128, 0, 0.918); 
- 
-  }
-  
-  ._in_decrement {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: var(--bg_btn);
-    border: unset;
-    color: var(--whitely);
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  ._fImage > span{
-    transform: translateX(-10px);
-    width: calc(100% - 25px)
-  };
+a {
+  color: var(--whitely);
+  text-decoration: none;
+}
 
-  
- 
+html,
+body {
+  color: var(--dark);
+  background-color: var(--darkest);
+}
+
+header {
+  height: 85px;
+  padding: 0 10px 0 10px;
+  border-bottom: 5px double var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  padding: 10px;
+}
+
+#tables {
+  margin-top: 5%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#tables > a {
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._tableAnchor {
+  background: linear-gradient(to right, var(--darker), var(--dark));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: thin solid var(--dark);
+}
+
+th,
+td {
+  border: thin solid var(--dark);
+  padding: 8px 10px;
+}
+
+caption {
+  caption-side: bottom;
+  border-left: thin solid var(--dark);
+  border-bottom: thin solid var(--dark);
+  border-right: thin solid var(--dark);
+}
+
+caption > div {
+  padding: 0 3% 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+caption > div > p {
+  color: var(--whitely);
+  font-size: 16px;
+}
+
+caption > div > button {
+  background-image: linear-gradient(
+    to right,
+    #348f50 0%,
+    #56b4d3 51%,
+    #348f50 100%
+  );
+  margin: 7px;
+  padding: 5px 45px;
+  height: 35px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 1px #eee;
+  border-radius: 7px;
+  display: block;
+  font-weight: 700;
+}
+
+caption > div > button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+form > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+select {
+  height: 35px;
+  text-transform: capitalize;
+  background-color: unset;
+  border: thin solid var(--dark);
+  color: var(--whitely);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: unset !important;
+  /* appearance: none; */
+}
+
+option {
+  background-color: var(--darkest);
+}
+
+#items {
+  width: 100%;
+  height: 125px;
+}
+
+#items > div {
+  min-width: 100%;
+  height: 125px;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 7.5px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+#items > div::-webkit-scrollbar {
+  width: 0;
+}
+
+#items > div > button {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  background: var(--bg_btn);
+  border: unset;
+  color: var(--whitely);
+}
+
+main[class="main"] {
+  display: flex;
+  flex-direction: row;
+}
+
+main[class="main"] > section:first-child {
+  width: calc(100% - 250px);
+}
+
+main[class="main"] > section:last-child {
+  width: 250px;
+}
+
+aside {
+  position: fixed;
+  top: 85px;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: var(--darkest);
+  border-left: 5px double var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside > div {
+  height: calc(100% - 50px);
+  overflow-y: scroll;
+}
+
+aside > div::-webkit-scrollbar {
+  width: 15px !important;
+  background-color: #ffffff09 !important;
+  border-left: thin solid rgba(128, 128, 128, 0.068) !important;
+}
+
+aside > div::-webkit-scrollbar-thumb {
+  background-color: #475569a6 !important;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #283c86 0%,
+    #45a247 51%,
+    #283c86 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+._sendBTN {
+  color: white;
+  box-shadow: 0 0 1px #eee;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    #283c86 0%,
+    #45a247 51%,
+    #283c86 100%
+  );
+  width: 95%;
+  align-self: center;
+  height: 39px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+._sendBTN:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+._in_decrement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--bg_btn);
+  border: unset;
+  color: var(--whitely);
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+}
+
+._fImage > span {
+  transform: translateX(-10px);
+  width: calc(100% - 25px);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center	;
+  justify-content: end;
+  padding-right: 2.5px;
+}
+
+footer > button > svg:hover{
+  transform: scale(1.1);
+  fill: #348f50;
+  stroke:#348f50;
+  transition: fill 0.3s ease;
+
+} 

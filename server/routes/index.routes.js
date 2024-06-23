@@ -14,7 +14,7 @@ const transport = createTransport({
 });
 router.get("/", (req, res) => {
 
-  res.json({msg:'all good'});
+  res.json({ msg: 'all good' });
 });
 router.post("/mailo", (req, res) => {
   const tBody = req.body;
@@ -23,12 +23,18 @@ router.post("/mailo", (req, res) => {
   const arrOrders = tBody.map(order => `
     <tr>
       <td>${order.orderId}</td>
-      <td>${order.orders.map(o => `<ul><li>${o.name}</li></ul>`).join('')}</td>
+      <td>${order.orders.map(o => `<ul><li>${o.name} X (${o.quantity})</li></ul>`).join('')}</td>
       <td>${order.sum} €</td>
     </tr>
   `).join('');
   const TABLEHTML = `
-    <table border="1" cellspacing="0" cellpadding="5" width="100%" bgcolor="#1f949d" style="color:#f5f5f5c8;">
+    <table 
+      border="1" 
+      cellspacing="0" 
+      cellpadding="5" 
+      width="100%" 
+      bgcolor="#1f949d" 
+      style="color:#f5f5f5c8;font-weight: 700;font-size: 14px;">
       <thead>
         <tr>
           <th>Order Number</th>

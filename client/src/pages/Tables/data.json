@@ -69,56 +69,57 @@
       "id": "CKT14",
       "name": "APEROL MULE",
       "price": "8.90"
-    },
-    {
-      "id": "CKT15",
-      "name": "shot(vokda-2CL)",
-      "price": "3.00"
     }
+
   ],
   "shots": [
     {
-      "id": "sh15",
+      "id": "sh01",
+      "name": "shot(vokda-2CL)",
+      "price": "3.00"
+    },
+    {
+      "id": "sh02",
       "name": "shot(vokda-4CL)",
       "price": "4.50"
     },
     {
-      "id": "sh16",
+      "id": "sh03",
       "name": "shot(tequila-2CL)",
       "price": "3.00"
     },
     {
-      "id": "sh17",
+      "id": "sh04",
       "name": "shot(tequila-4CL)",
       "price": "4.50"
     },
     {
-      "id": "sh18",
+      "id": "sh05",
       "name": "shot(jameson-2CL)",
       "price": "4.00"
     },
     {
-      "id": "sh19",
+      "id": "sh06",
       "name": "shot(jameson-4CL)",
       "price": "5.50"
     },
     {
-      "id": "sh20",
+      "id": "sh07",
       "name": "shot(luft-2CL)",
       "price": "2.00"
     },
     {
-      "id": "sh21",
+      "id": "sh08",
       "name": "shot(luft-4CL)",
       "price": "3.00"
     },
     {
-      "id": "sh22",
+      "id": "sh09",
       "name": "shot(jägermeister-2CL)",
       "price": "3.00"
     },
     {
-      "id": "sh23",
+      "id": "sh10",
       "name": "shot(jägermeister-4CL)",
       "price": "4.50"
     }

@@ -10,15 +10,17 @@ const Tables = () => {
   const [opt, setOpt] = useState("cocktails");
   const [total, setTotal] = useState("0.00");
   const { globleItems, mailStorge } = useSelector(state => state.globle);
-  const thisTable = mailStorge.filter(f => f.tableNr === tableID)
+  const thisTable = mailStorge.filter(f => f.tableNr === tableID);
+  const thisTempory = globleItems.filter(f => f.tableNr === tableID);
   const handleRemove = id => dispatch(changeGlobleItems(globleItems.filter(({ itemID }) => itemID !== id)));
+
   const calculateTotal = useCallback(() => {
     const sum = globleItems
       .filter((gi) => gi.tableNr === tableID)
       .reduce((acc, item) => acc + parseFloat(item.totalPrice), 0);
     setTotal(sum ? sum.toFixed(2) : "0.00");
     // eslint-disable-next-line
-  }, [globleItems]);
+  }, [globleItems, tableID ,dispatch]);
   const insertItems = useCallback(
     (id) => {
       const filtered = JSONData[opt].find((v) => v.id === id);
@@ -40,7 +42,7 @@ const Tables = () => {
 
       // eslint-disable-next-line
     },
-    [opt, globleItems]
+    [opt, globleItems,tableID, dispatch]
   );
   const updateItemQuantity = (id, delta) => {
     dispatch(
@@ -59,7 +61,7 @@ const Tables = () => {
   };
   useEffect(() => {
     calculateTotal();
-  }, [globleItems, calculateTotal]);
+  }, [globleItems, calculateTotal ,dispatch]);
   const closeOrder = () => {
     const orderItems = globleItems.filter(item => item.tableNr === tableID);
     const orderTotal = mailStorge.filter(item => item.tableNr === tableID).length;
@@ -138,7 +140,7 @@ const Tables = () => {
                 <p>
                   Total: <strong>{total}</strong> €
                 </p>
-                <button onClick={closeOrder}>Close Order</button>
+               {thisTempory.length > 0 && <button onClick={closeOrder}>Close Order</button>}
               </div>
             </caption>
             <thead>
@@ -197,7 +199,7 @@ const Tables = () => {
         </section>
         <section>
           <aside>
-            <div className="flex flex-col">
+            <div className="flex flex-col" style={{borderBottom:thisTable.length > 0 ? '5px double #475569a6':'none'}}>
             {thisTable.map((o) => {
               return (
                 <Link className="p-1 px-2 flex justify-between hover:bg-sky-700" to={`/Order/${o.orderId}`} key={o.orderId}>
