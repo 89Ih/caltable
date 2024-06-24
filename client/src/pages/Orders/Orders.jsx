@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useSelector} from "react-redux";
+import Header from "../../components/Header/Header";
 function Orders() {
   const { id } = useParams();
   const { mailStorge } = useSelector((state) => state.globle);
@@ -8,18 +9,14 @@ function Orders() {
   };
   return (
     <>
-      <header>
-        <Link to="/">
-          <h1 className="text-3xl">{id}</h1>
-        </Link>
-      </header>
-      <div>
+      <Header children={<h1 className="text-2xl">{id}</h1>}/>
+      <div className="mt-10">
         {mailStorge
           .filter((f) => f.orderId === id)
           .map(({ orderId, sum, orders }) => {
             return (
               <table key={orderId}>
-                <caption>
+                <caption >
                   <div>
                     <p>
                       Total: <strong>{sum}</strong> €

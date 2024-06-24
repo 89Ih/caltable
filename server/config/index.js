@@ -5,8 +5,6 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const FRONTEND_URL = process.env.ORIGIN;
 const PRODUCTION_URL = process.env.PRODUCTION_URL;
-
-
 module.exports = app => {
   app.set("trust proxy", 1);
   app.use(

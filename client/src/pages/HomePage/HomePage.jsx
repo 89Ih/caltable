@@ -3,16 +3,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import { useSelector, useDispatch } from "react-redux";
 import { changeGlobleItems, sendMails } from "../../redux/globleSlice";
+import Header from "../../components/Header/Header";
 function HomePage() {
   const { logOutUser } = useContext(AuthContext);
   const dispatch = useDispatch();
-  const [tody] = useState(
-    new Intl.DateTimeFormat("de", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    }).format(new Date())
-  );
   const [tables, setTables] = useState(
     Array.from({ length: 8 }, (_, i) => ({ table: i + 1, free: false }))
   );
@@ -48,10 +42,8 @@ function HomePage() {
   }, [globleItems]);
   return (
     <div>
-      <header>
-        <h1 className="text-3xl">CalTables</h1>
-        <p>{tody}</p>
-      </header>
+      <Header/>
+
       <main>
         <section>
           <div id="tables">

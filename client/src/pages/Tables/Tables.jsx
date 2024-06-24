@@ -4,6 +4,7 @@ import JSONData from "./data.json";
 import removeIcon from "./remove.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { changeGlobleItems, sendMails } from "../../redux/globleSlice";
+import Header from "../../components/Header/Header";
 const Tables = () => {
   const dispatch = useDispatch();
   const tableID = useParams().id;
@@ -94,11 +95,7 @@ const Tables = () => {
   }
   return (
     <>
-      <header>
-        <Link to="/">
-          <h1 className="text-3xl">Table {tableID}</h1>
-        </Link>
-      </header>
+      <Header children={<h1 className="flex text-2xl">Table <span>{tableID}</span></h1>}/>
       <main className="main">
         <section>
           <form>

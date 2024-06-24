@@ -26,16 +26,13 @@ body {
   color: var(--dark);
   background-color: var(--darkest);
 }
-
 header {
-  height: 85px;
-  padding: 0 10px 0 10px;
-  border-bottom: 5px double var(--dark);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  background-color: #010a13 !important;
+  z-index: 1;
+  position: sticky;
+  top: 0;
 
+}
 section {
   padding: 10px;
 }
@@ -190,12 +187,12 @@ main[class="main"] > section:last-child {
 
 aside {
   position: fixed;
-  top: 85px;
+  top: 80px;
   right: 0;
   bottom: 0;
   width: 250px;
   background-color: var(--darkest);
-  border-left: 5px double var(--dark);
+  border-left: 5px double #475569a6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -214,32 +211,6 @@ aside > div::-webkit-scrollbar {
 
 aside > div::-webkit-scrollbar-thumb {
   background-color: #475569a6 !important;
-}
-
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #283c86 0%,
-    #45a247 51%,
-    #283c86 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
 
 ._sendBTN {
@@ -263,7 +234,6 @@ aside > div::-webkit-scrollbar-thumb {
 
 ._sendBTN:hover {
   background-position: right center;
-  /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
@@ -305,3 +275,80 @@ footer > button > svg:hover{
   transition: fill 0.3s ease;
 
 } 
+
+@media only screen and (max-width: 600px) {
+  main[class="main"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  main[class="main"] > section:first-child {
+    width: 100%;
+  }
+  
+  main[class="main"] > section:last-child {
+    margin:50px 0 30px 0;
+    width: 100%;
+
+  }
+  aside {
+    top: unset;
+    width: 100%;
+    background-color: var(--darkest);
+    border-top: 5px double var(--dark);
+    border-left:unset; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 200px;
+    bottom: 5px;
+  }
+  aside > div {
+    max-height: 150px;
+  }
+  ._sendBTN {
+    height: 39px;
+    margin-top: 10px;
+    background-size: 200% auto;
+    height: 50px;
+  }
+  table{
+    color: #CCC;
+    background-color: #19508046;
+    max-height: 300px;
+    margin-bottom: 100px;
+  }
+  
+._child > h1 {
+  font-size:18px;
+  font-weight: 500;
+}
+}
+
+._div_line {
+  background: linear-gradient(to right,
+      var(--darkest) 0%,
+      var(--darker) 30%,
+      var(--darker) 40%,
+      #232d3d 50%,
+      #475569 60%,
+      #475569 70%,
+      #a3b6ccd5 80%,
+      #cbd5e1 100%);
+  background-position: bottom;
+  background-size: 100% 4.91px;
+  background-repeat: no-repeat;
+
+}
+._para{
+  position: fixed;
+  right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+._child{
+  position: fixed;
+  left: 10px; 
+}

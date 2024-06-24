@@ -2,6 +2,7 @@ import "./SignupPage.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../../services/auth.service";
+import Header from "../../components/Header/Header";
 
 function SignupPage() {
   const [email, setEmail] = useState("");
@@ -30,32 +31,34 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
-      <h1>Sign Up</h1>
+    <>
+      <Header />
+      <div className="pt-10 flex flex-col items-center justify-center gap-10 h-full">
+        <h1 className="text-3xl">Sign Up</h1>
+        <form onSubmit={handleSignupSubmit} className="flex flex-col justify-center items-center gap-5 _login">
+          <input
+            className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent"
+            placeholder="Email :" type="email" name="email" value={email} onChange={handleEmail} />
+          <input
+            placeholder="Password :"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handlePassword}
+            className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent"
+          />
+          <input
+            className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent"
+            placeholder="Name:" type="text" name="name" value={name} onChange={handleName} />
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+          <button className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent font-bold" type="submit">Sign Up</button>
+        </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <p>Already have account?</p>
+        <Link to={"/login"}> Login</Link>
+      </div>
+    </>
 
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
-
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
-
-        <button type="submit">Sign Up</button>
-      </form>
-
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link>
-    </div>
   );
 }
 
