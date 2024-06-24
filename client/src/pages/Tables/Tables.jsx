@@ -95,7 +95,7 @@ const Tables = () => {
   }
   return (
     <>
-      <Header children={<h1 className="flex text-2xl">Table <span>{tableID}</span></h1>}/>
+      <Header children={<h1 className="flex text-3xl">Table <span>{tableID}</span></h1>}/>
       <main className="main">
         <section>
           <form>
@@ -153,7 +153,7 @@ const Tables = () => {
                 .map((item) => (
                   <tr key={item.id}>
                     <th>
-                      <div className="flex flex-row w-full _fImage">
+                      <div className="flex flex-row items-center  w-full _fImage">
                         <button
                           type="button"
                           onClick={() => handleRemove(`T${tableID}-${item.id}`)}
@@ -166,7 +166,6 @@ const Tables = () => {
                             src={removeIcon}
                           />
                         </button>
-
                         <span>{item.name}</span>
                       </div>
                     </th>

@@ -9,7 +9,7 @@ function Orders() {
   };
   return (
     <>
-      <Header children={<h1 className="text-2xl">{id}</h1>}/>
+      <Header children={<h1 className="_fz">{id}</h1>}/>
       <div className="mt-10">
         {mailStorge
           .filter((f) => f.orderId === id)

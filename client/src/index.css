@@ -352,3 +352,16 @@ footer > button > svg:hover{
   position: fixed;
   left: 10px; 
 }
+
+._fz{
+  font-size: 20px;
+  font-weight: 500;
+
+}
+@media only screen and (max-width: 450px) {
+  ._fz{
+    font-size: 3.8dvw;
+  
+  }
+
+}
