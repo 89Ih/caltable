@@ -53,10 +53,10 @@ const Tables = () => {
         globleItems.map((item) =>
           item.itemID === id
             ? {
-                ...item,
-                quantity: item.quantity + delta,
-                totalPrice: ((item.quantity + delta) * item.price).toFixed(2),
-              }
+              ...item,
+              quantity: item.quantity + delta,
+              totalPrice: ((item.quantity + delta) * item.price).toFixed(2),
+            }
             : item
         )
       )
@@ -105,14 +105,12 @@ const Tables = () => {
   };
   return (
     <>
-      <Header
-        children={
+      <Header>
           <h1 className="flex text-3xl">
             Table <span>{tableID}</span>
           </h1>
-        }
-      />
-      <main className="main">
+      </Header>
+       <main className="main">
         <section>
           <form>
             <div>
@@ -147,7 +145,8 @@ const Tables = () => {
               </div>
             </div>
           </form>
-          <table id="table">
+          <div>
+          <table >
             <caption>
               <div>
                 <p>
@@ -242,6 +241,7 @@ const Tables = () => {
                 ))}
             </tbody>
           </table>
+          </div>
         </section>
         <section>
           <aside>

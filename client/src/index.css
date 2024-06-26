@@ -33,9 +33,6 @@ header {
   top: 0;
 
 }
-/* section {
-  padding: 10px;
-} */
 
 #tables {
   margin-top: 5%;
@@ -185,6 +182,10 @@ main[class="main"] > section:first-child {
   width: calc(100% - 250px);
 }
 
+main[class="main"] > section:first-child > div{
+padding: 0 10px 0 10px;
+margin-bottom: 10px;
+}
 main[class="main"] > section:last-child {
   width: 250px;
 }
