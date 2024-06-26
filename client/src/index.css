@@ -33,9 +33,9 @@ header {
   top: 0;
 
 }
-section {
+/* section {
   padding: 10px;
-}
+} */
 
 #tables {
   margin-top: 5%;
@@ -123,6 +123,7 @@ form > div:first-child {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 15px;
+  padding:10px 10px 0 10px;
 }
 
 select {
@@ -146,6 +147,7 @@ option {
 #items {
   width: 100%;
   height: 125px;
+  padding-left: 10px;
 }
 
 #items > div {
@@ -304,15 +306,15 @@ footer > button > svg:hover{
     flex-direction: column;
     justify-content: space-between;
     max-height: 200px;
-    bottom: 5px;
+    /* bottom: 5px; */
   }
   aside > div {
     max-height: 150px;
   }
   ._sendBTN {
     height: 39px;
-    margin-top: 10px;
-    background-size: 200% auto;
+    margin-top: 7px;
+    margin-bottom: 7px;
     height: 50px;
   }
   table{
@@ -343,7 +345,7 @@ footer > button > svg:hover{
   background-repeat: no-repeat;
 
 }
-._para{
+/* ._para{
   position: fixed;
   right: 10px;
   font-size: 18px;
@@ -353,7 +355,7 @@ footer > button > svg:hover{
 ._child{
   position: fixed;
   left: 10px; 
-}
+} */
 
 ._fz{
   font-size: 20px;
