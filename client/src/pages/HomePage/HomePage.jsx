@@ -13,9 +13,7 @@ function HomePage() {
   const { globleItems } = useSelector((state) => state.globle);
   const reserviert = () => {
     const reservedTables = globleItems.filter(({ tableNr }) => {
-      const index = tables.findIndex(
-        ({ table }) => parseInt(table) === parseInt(tableNr)
-      );
+      const index = tables.findIndex( ({ table }) => parseInt(table) === parseInt(tableNr) );
       if (index !== -1) {
         tables[index]["free"] = true;
         return true;

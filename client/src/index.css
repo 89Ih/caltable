@@ -31,12 +31,12 @@ header {
   z-index: 1;
   position: sticky;
   top: 0;
-
 }
 
 #tables {
   margin-top: 5%;
   width: 100%;
+
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap !important;
@@ -120,9 +120,9 @@ form > div:first-child {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 15px;
-  padding:10px 10px 0 10px;
+  padding: 10px 10px 0 10px;
 }
-
+._moneyToReturn_btn,
 select {
   height: 35px;
   text-transform: capitalize;
@@ -134,7 +134,6 @@ select {
   padding-right: 5px;
   outline: unset !important;
   appearance: none;
-
 }
 
 option {
@@ -177,15 +176,17 @@ option {
 main[class="main"] {
   display: flex;
   flex-direction: row;
+
 }
 
 main[class="main"] > section:first-child {
   width: calc(100% - 250px);
+
 }
 
-main[class="main"] > section:first-child > div{
-padding: 0 10px 0 10px;
-margin-bottom: 10px;
+main[class="main"] > section:first-child > div {
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
 }
 main[class="main"] > section:last-child {
   width: 250px;
@@ -269,18 +270,39 @@ footer {
   width: 100%;
   height: 45px;
   display: flex;
-  align-items: center	;
+  align-items: center;
   justify-content: end;
   padding-right: 2.5px;
 }
 
-footer > button > svg:hover{
+footer > button > svg:hover {
   transform: scale(1.1);
   fill: #348f50;
-  stroke:#348f50;
+  stroke: #348f50;
   transition: fill 0.3s ease;
+}
 
-} 
+@media only screen and (max-width: 850px) {
+
+  caption > div {
+    padding-top: 15px;
+    flex-direction: column;
+  
+  }
+  caption > div > p{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    text-align: start;
+    background-color: #085e7413;
+    border-bottom: thin solid #085e74;
+    margin-bottom: 7px;
+  }
+  caption > div > * {
+    min-height: 38px ;
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   main[class="main"] {
@@ -288,22 +310,21 @@ footer > button > svg:hover{
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   main[class="main"] > section:first-child {
     width: 100%;
   }
-  
-  main[class="main"] > section:last-child {
-    margin:50px 0 30px 0;
-    width: 100%;
 
+  main[class="main"] > section:last-child {
+    margin: 50px 0 30px 0;
+    width: 100%;
   }
   aside {
     top: unset;
     width: 100%;
     background-color: var(--darkest);
     border-top: 5px double var(--dark);
-    border-left:unset; 
+    border-left: unset;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -319,33 +340,42 @@ footer > button > svg:hover{
     margin-bottom: 7px;
     height: 50px;
   }
-  table{
-    color: #CCC;
+  table {
+    color: #ccc;
     background-color: #19508046;
     max-height: 300px;
     margin-bottom: 100px;
   }
-  
-._child > h1 {
-  font-size:18px;
-  font-weight: 500;
-}
+
+  ._child > h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  caption > div {
+    padding-top: 15px;
+    flex-direction: column;
+  }
+  caption > div > * {
+    min-height: 38px ;
+    width: 100%;
+  }
 }
 
 ._div_line {
-  background: linear-gradient(to right,
-      var(--darkest) 0%,
-      var(--darker) 30%,
-      var(--darker) 40%,
-      #232d3d 50%,
-      #475569 60%,
-      #475569 70%,
-      #a3b6ccd5 80%,
-      #cbd5e1 100%);
+  background: linear-gradient(
+    to right,
+    var(--darkest) 0%,
+    var(--darker) 30%,
+    var(--darker) 40%,
+    #232d3d 50%,
+    #475569 60%,
+    #475569 70%,
+    #a3b6ccd5 80%,
+    #cbd5e1 100%
+  );
   background-position: bottom;
   background-size: 100% 4.91px;
   background-repeat: no-repeat;
-
 }
 /* ._para{
   position: fixed;
@@ -359,50 +389,46 @@ footer > button > svg:hover{
   left: 10px; 
 } */
 
-._fz{
+._fz {
   font-size: 20px;
   font-weight: 500;
-
 }
 @media only screen and (max-width: 450px) {
-  ._fz{
+  ._fz {
     font-size: 3.8dvw;
-  
   }
-
 }
 
-
-._titlePrint{
+._titlePrint {
   display: none;
 }
 @media print {
-  html, body {
+  html,
+  body {
     height: initial !important;
     overflow: initial !important;
-    -webkit-print-color-adjust:exact;
+    -webkit-print-color-adjust: exact;
     background-color: #cef5f8;
-    color:#085e74;
+    color: #085e74;
     text-transform: uppercase;
   }
-  ._titlePrint{
+  ._titlePrint {
     display: block;
     padding: 10px 10px;
   }
-  caption >div >button{
+  caption > div > button {
     display: none;
   }
   caption > div > p {
     font-weight: 500;
-    color:#085e74;
+    color: #085e74;
   }
-table {
-  border-collapse:separate !important;
-
-}
+  table {
+    border-collapse: separate !important;
+  }
 }
 
 @page {
-  size: 50px auto; 
-  margin: 5px; 
+  size: 50px auto;
+  margin: 5px;
 }

@@ -1,11 +1,13 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import JSONData from "./data.json";
 import { useSelector, useDispatch } from "react-redux";
 import { changeGlobleItems, sendMails } from "../../redux/globleSlice";
 import Header from "../../components/Header/Header";
 const Tables = () => {
   const dispatch = useDispatch();
+  const recived = useRef(0);
+  const [rest, setRest] = useState(0);
   const tableID = useParams().id;
   const [opt, setOpt] = useState("cocktails");
   const [total, setTotal] = useState("0.00");
@@ -64,7 +66,7 @@ const Tables = () => {
   };
   useEffect(() => {
     calculateTotal();
-  }, [globleItems, calculateTotal, dispatch]);
+  }, [globleItems, calculateTotal, dispatch ,rest]);
   const closeOrder = () => {
     const orderItems = globleItems.filter((item) => item.tableNr === tableID);
     const orderTotal = mailStorge.filter(
@@ -84,6 +86,7 @@ const Tables = () => {
         globleItems.filter(({ tableNr }) => tableNr !== tableID)
       )
     );
+    setRest(0)
   };
   const migrateOrder = async () => {
     const { REACT_APP_SERVER_URL } = process.env;
@@ -103,6 +106,11 @@ const Tables = () => {
       console.error("Error closing order:", error);
     }
   };
+  const calRest= useCallback(()=>{
+    const moneyToReturn = recived.current?.value;
+    setRest(()=> (moneyToReturn <= 0  ) ? 0 : moneyToReturn - total)
+  },[total])
+
   return (
     <>
       <Header>
@@ -111,7 +119,7 @@ const Tables = () => {
           </h1>
       </Header>
        <main className="main">
-        <section>
+        <section className={`${thisTable.length > 0 ? 'min-w-[cal(100%-250px)]':'min-w-full'}`}>
           <form>
             <div>
               <label htmlFor="opt">Select category :</label>
@@ -150,10 +158,21 @@ const Tables = () => {
             <caption>
               <div>
                 <p>
-                  Total: <strong>{total}</strong> €
+                  Total: <strong>{total}{' '}€</strong>
                 </p>
                 {thisTempory.length > 0 && (
+                  <>
+                  <div className="px-2 flex items-center justify-between gap-2 border border-slate-800 rounded-md">
+                  <input 
+                      style={{backgroundColor:'unset'}}
+                      className="h-8 outline-none " 
+                      ref={recived} 
+                      onChange={calRest} 
+                      placeholder="Enter value"/>
+                    <span>{rest.toFixed(2)} €</span>
+                  </div>
                   <button onClick={closeOrder}>Close Order</button>
+                  </>
                 )}
               </div>
             </caption>
@@ -243,7 +262,8 @@ const Tables = () => {
           </table>
           </div>
         </section>
-        <section>
+        {thisTable.length > 0 && 
+        <section> 
           <aside>
             <div
               className="flex flex-col"
@@ -274,6 +294,7 @@ const Tables = () => {
             )}
           </aside>
         </section>
+      }
       </main>
     </>
   );
