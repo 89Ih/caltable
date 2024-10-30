@@ -8,7 +8,7 @@ function HomePage() {
   const { logOutUser, } = useContext(AuthContext);
   const dispatch = useDispatch();
   const [tables, setTables] = useState(
-    Array.from({ length: 8 }, (_, i) => ({ table: i + 1, free: false }))
+    Array.from({ length:8 }, (_, i) => ({ table: i + 1, free: false }))
   );
   const { globleItems } = useSelector((state) => state.globle);
   const reserviert = () => {
@@ -45,7 +45,7 @@ function HomePage() {
           <div id="tables">
             {tables.map((a) => (
               <Link
-                className={a.free === true ? "bg-green-700" : "_tableAnchor"}
+                className={a.free === true ? "_tableResrveted" : "_tableAnchor"}
                 key={`table${a.table}`}
                 to={`Table/${a.table}`}
               >

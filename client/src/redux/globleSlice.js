@@ -1,13 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-
 export const globleSlice = createSlice({
   name: "globle",
   initialState: {
     globleItems: [],
     mailStorge:[]
   },
- 
   reducers: {
     changeGlobleItems: (state, action) => {
       state.globleItems = action.payload;
@@ -17,6 +14,5 @@ export const globleSlice = createSlice({
     }
   },
 });
-
 export const { changeGlobleItems,sendMails} = globleSlice.actions;
 export default globleSlice.reducer;

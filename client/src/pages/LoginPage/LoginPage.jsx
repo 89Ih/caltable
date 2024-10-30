@@ -36,14 +36,14 @@ function LoginPage() {
         onSubmit={handleLoginSubmit}
         className="flex flex-col justify-center items-center gap-5 _login">
         <input
-          className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800  bg-transparent"
+          className="w-96 h-10 pl-2 rounded-lg border-2 border-solid border-x-white  bg-transparent outline-none focus:bg-transparent "
           type="email"
           name="email"
           placeholder="Email :"
           value={email}
           onChange={(event) => setEmail(event.target.value)} />
         <input
-          className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent"
+          className="w-96 h-10 pl-2 rounded-lg border-2 border-solid border-x-white bg-transparent outline-none focus:bg-transparent"
           placeholder="Password :"
           type="password"
           name="password"
@@ -51,7 +51,7 @@ function LoginPage() {
           onChange={(event) => setPassword(event.target.value)}
         />
         <button
-          className="w-96 h-10 pl-2 rounded-lg border border-solid border-slate-800 bg-transparent font-bold"
+          className="w-96 h-10 pl-2 rounded-lg border-2 border-solid border-x-white bg-transparent outline-none font-bold "
           type="submit">Login</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
